@@ -1129,3 +1129,84 @@ the website, in dark theme
 .tag {
    font-size: 0.7rem;
 }
+
+/*=============== TESTIMONIALS ===============*/
+.testimonials__container {
+    gap: 2.5rem;
+    padding-top: 1rem;
+}
+
+.testimonial__card {
+    background-color: var(--container-color);
+    padding: 2rem 2rem 2rem;
+    border-radius: 1.5rem;
+    border: 2px solid var(--first-color-light);
+    transition: .3s;
+}
+
+.testimonial__card:hover {
+    box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, .25);
+}
+
+.testimonial__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.testimonial__profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonial__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.testimonial__position {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.testimonial__quote {
+    font-size: 2.5rem;
+    color: var(--first-color);
+}
+
+.testimonial__description {
+    font-size: var(--small-font-size);
+    margin-bottom: .75rem;
+    line-height: 1.5;
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For medium devices */
+@media screen and (min-width: 576px) {
+    .testimonials__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .testimonials__container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* For large devices */
+@media screen and (min-width: 992px) {
+    .testimonial__card {
+        padding: 2.5rem 2rem 2.5rem;
+    }
+}
